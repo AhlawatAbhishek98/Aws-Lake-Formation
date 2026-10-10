@@ -1,0 +1,5 @@
+  CREATE EXTERNAL TABLE college_db.students (
+    student_id int, name string, email string, department string, cgpa double)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+  LOCATION 's3://lf-demo-data-<yourname>/students/'
+  TBLPROPERTIES ('skip.header.line.count'='1');
